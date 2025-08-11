@@ -7,7 +7,7 @@ export default defineNuxtConfig({
 	app: {
     baseURL: '/ocis-ghana',
 		head: {
-			title: "ocis ghana".toUpperCase(),
+			title: "ocisghana".toUpperCase(),
 			htmlAttrs: {
 				lang: "en-GH",
 				class: "dark",
