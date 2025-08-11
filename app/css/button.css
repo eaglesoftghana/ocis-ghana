@@ -1,0 +1,226 @@
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+.button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	padding: var(--spacing-3) var(--spacing-4);
+	text-align: center;
+	border-radius: var(--spacing-1);
+	display: inline-block;
+	margin: 0;
+	transition: background-color 0.3s ease-in-out;
+	position: relative;
+	z-index: 1;
+	background-color: transparent;
+	text-decoration: none;
+  
+
+	&.sm {
+		padding: var(--spacing-1) var(--spacing-2);
+		font-size: var(--font-size-sm);
+	}
+	&.lg {
+		padding: var(--spacing-4) var(--spacing-5);
+	}
+
+	&:focus-visible {
+		outline-offset: 2px;
+		outline-color: inherit;
+		outline-style: solid;
+		outline-width: inherit;
+		font-family: inherit;
+		box-shadow: var(--shadow-md);
+	}
+}
+.button:focus,
+.button:active {
+	opacity: 0.95;
+}
+
+.button.disabled,
+.button:disabled {
+	cursor: not-allowed;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+  opacity: 0.65;
+}
+
+[role="button"],
+[role="link"] {
+	cursor: pointer !important;
+}
+
+.button.no-outline {
+	outline: none !important;
+	border: none;
+	box-shadow: none;
+}
+.button.primary {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-primary-dark);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-primary);
+		outline-offset: 2px;
+		outline-color: var(--color-primary);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.success {
+	background-color: var(--color-success);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-success-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-success);
+		outline-offset: 2px;
+		outline-color: var(--color-success);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.success-light {
+	background-color: var(--color-success-light);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-success-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-success-light);
+		outline-offset: 2px;
+		outline-color: var(--color-success-light);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.info-alt {
+	background-color: var(--color-info-alt);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-info-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-info-alt);
+		outline-offset: 2px;
+		outline-color: var(--color-info-alt);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.warning {
+	background-color: var(--color-warning);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-warning-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-warning);
+		outline-offset: 2px;
+		outline-color: var(--color-warning);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.danger {
+	background-color: var(--color-danger);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-danger-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-danger);
+		outline-offset: 2px;
+		outline-color: var(--color-danger);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.info {
+	background-color: var(--color-info);
+	color: var(--color-white);
+
+	&:hover {
+		background-color: var(--color-info-text);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-info);
+		outline-offset: 2px;
+		outline-color: var(--color-info);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.dark {
+	background-color: var(--color-dark);
+	color: var(--color-light);
+
+	&:hover {
+		background-color: var(--color-gray-900);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-dark);
+		outline-offset: 2px;
+		outline-color: var(--color-dark);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+.button.light {
+	background-color: var(--color-gray-400);
+	color: var(--color-dark);
+
+	&:hover {
+		background-color: var(--color-gray-500);
+	}
+	&:focus-within,
+	&:focus {
+		background-color: var(--color-gray-400);
+		outline-offset: 2px;
+		outline-color: var(--color-gray-400);
+		outline-style: solid;
+		outline-width: 1.65px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.button,
+	button {
+		transition: none;
+	}
+}

@@ -1,75 +1,13 @@
-# Nuxt Minimal Starter
+# OCIS GHANA (Online Church Information Sytem Ghana)
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+**The official OCIS-Ghana website github repo**
 
-## Setup
+## About OCIS-Ghana
 
-Make sure to install dependencies:
+Online Church Information System Ghana, (OCIS GHANA), is a flagship project by [Eaglesoft Ghana](//eaglesoftghana.github.io)
 
-```bash
-# npm
-npm install
+*This platform is a comprehensive cloud-based solution designed to streamline the operations of churches and religious organizations. We are more than just a software provider; we are partners in ministry, dedicated to empowering church leaders to focus on what truly matters: serving their congregations and spreading the Gospel*
 
-# pnpm
-pnpm install
 
-# yarn
-yarn install
 
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+_This repository contains the official website code for OCIS Ghana._
