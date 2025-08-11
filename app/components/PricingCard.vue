@@ -5,7 +5,7 @@ const props = defineProps({
     type: Array,
     required: true,
     validator: (value) => {
-      return value.every(tier =>
+      return value.map(tier =>
         typeof tier.name === 'string' &&
         typeof tier.price === 'string' &&
         typeof tier.period === 'string' &&

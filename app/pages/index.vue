@@ -1,5 +1,6 @@
 <script setup>
 import img from '~/assets/image/web.webp';
+const screenshot = ref('/screenshot.png');
 
 const pricingTiers = ref([
   {
@@ -125,7 +126,7 @@ const pricingTiers = ref([
                 </ul>
               </div>
               <div class="px-5 d-none lg:d-block">
-                <ImageViewer full-size-src="/screenshot.png" thumbnail-src="/screenshot.png" />
+                <ImageViewer :full-size-src="screenshot" :thumbnail-src="screenshot" />
               </div>
             </div>
           </div>
@@ -163,7 +164,7 @@ const pricingTiers = ref([
                 </ul>
               </div>
               <div class="px-5 d-none lg:d-block">
-                <ImageViewer full-size-src="/screenshot.png" thumbnail-src="/screenshot.png" />
+                <ImageViewer :full-size-src="screenshot" :thumbnail-src="screenshot" />
               </div>
             </div>
           </div>
@@ -201,7 +202,7 @@ const pricingTiers = ref([
                 </ul>
               </div>
               <div class="px-5 d-none lg:d-block">
-                <ImageViewer full-size-src="/screenshot.png" thumbnail-src="/screenshot.png" />
+                <ImageViewer :full-size-src="screenshot" :thumbnail-src="screenshot" />
               </div>
             </div>
           </div>
@@ -239,7 +240,7 @@ const pricingTiers = ref([
                 </ul>
               </div>
               <div class="px-5 d-none lg:d-block">
-                <ImageViewer full-size-src="/screenshot.png" thumbnail-src="/screenshot.png" />
+                <ImageViewer :full-size-src="screenshot" :thumbnail-src="screenshot" />
               </div>
             </div>
           </div>
@@ -288,7 +289,7 @@ const pricingTiers = ref([
         and grow your ministry with confidence.
       </p>
       <ul style="list-style-position: inside;">
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Members
           </h5>
@@ -299,9 +300,9 @@ const pricingTiers = ref([
             together. Quickly find who you're looking for with a powerful search, and get a clear overview of your
             church's most valuable asset: its people.
           </p>
-          <img oncontextmenu="return false;" class="img-screenshot" src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Branch Management
           </h5>
@@ -313,9 +314,9 @@ const pricingTiers = ref([
             resources, and synchronize data across all your locations. It ensures consistent standards and provides a
             unified view of your ministry's growth, no matter how many branches you establish.
           </p>
-          <img oncontextmenu="return false;" class="img-screenshot" src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Assets
           </h5>
@@ -325,11 +326,11 @@ const pricingTiers = ref([
             musical
             instruments to vehicles and property. Our Assets module helps you track every item, ensuring nothing is lost
             or unaccounted for. You can easily manage maintenance schedules, assign items to departments, and generate
-            reports for a clear picture of your church’s resources
+            reports for a clear picture of your church's resources
           </p>
-          <img oncontextmenu="return false;" class="img-screenshot" src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Departments & Ministries
           </h5>
@@ -341,9 +342,9 @@ const pricingTiers = ref([
             Ushers, Choir, or the Youth Ministry, assign leaders, and keep a clear record of team members. It simplifies
             coordination, empowering your ministry leaders to serve effectively.
           </p>
-          <img oncontextmenu="return false;" class="img-screenshot" src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Events Management
           </h5>
@@ -355,9 +356,9 @@ const pricingTiers = ref([
             detailed event pages, track attendance, and send targeted communications to attendees. Everything from
             registration to follow-up is streamlined, ensuring your events are successful and well-attended.
           </p>
-          <img oncontextmenu="return false;" class="img-screenshot" src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             communication
           </h5>
@@ -370,9 +371,9 @@ const pricingTiers = ref([
             and
             engaged. This module saves time and ensures a strong, consistent connection with your entire church body.
           </p>
-          <img src="/screenshot.png" alt="" />
+          <img :src="screenshot" alt="" />
         </li>
-        <li class="pt-3">
+        <li class="py-3">
           <h5 class="d-inline text-uppercase text-success">
             Finance
           </h5>
@@ -384,7 +385,7 @@ const pricingTiers = ref([
             convenient way to support the church. Generate comprehensive financial reports to ensure accountability and
             effortless planning.
           </p>
-          <img src="/screenshot.png" alt="" />
+          <img oncontextmenu="return false;" class="img-screenshot" :src="screenshot" alt="" />
         </li>
       </ul>
     </div>
@@ -402,7 +403,9 @@ const pricingTiers = ref([
         We're here to help you get the most out of <span>
           Online Church Information Management System Ghana. </span>
         Whether you have a question about our features, need assistance with pricing, or want a personalized demo, our
-        team at Eaglesoft Ghana is ready to assist you
+        team at <nuxt-link class="text-success" href="//eaglesoftghana.github.io" external>Eaglesoft Ghana</nuxt-link>
+        is
+        ready to assist you
       </p>
       <h5 class="text-capitalize mt-3">
       </h5>
@@ -424,7 +427,7 @@ img,
 .bg-overlay {
   height: 100vh;
   background-size: cover;
-  background-position: left center;
+  background-position: center;
   background-repeat: no-repeat;
   background-color: rgba(0, 0, 0, 0.55);
   background-blend-mode: multiply;

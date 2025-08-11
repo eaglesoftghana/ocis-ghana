@@ -53,7 +53,7 @@ onUnmounted(() => {
 
 });
 
-const isMenuShown = ref(1);
+const isMenuShown = ref(false);
 
 const toggleMenu = () => {
   isMenuShown.value = !isMenuShown.value
@@ -68,7 +68,7 @@ function hideMenu(event) {
 
 <template>
   <div
-    class="app-header fixed top-0 left-0 right-0 z-index-100 mb-2 md:border-0 border-bottom border-gray-900 scrolling"
+    class="app-header fixed top-0 left-0 right-0 z-index-100 mb-2 shadow scrolling"
     style="margin-bottom: 75px;">
     <header class="layout py-2" style="max-width: 992px;">
       <nav class="flex  items-center justify-between">
@@ -132,7 +132,7 @@ a.active {
   transition: all .3s ease-in-out;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  /* background-color: rgba(255, 255, 255, 0.05); */
+  background-color: rgba(255, 255, 255, 0.05);
 
 }
 </style>
