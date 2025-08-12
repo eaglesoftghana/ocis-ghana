@@ -29,7 +29,7 @@ const props = defineProps({
     <h6 class="pt-4">
       Find the perfect plan for your church's needs. No hidden fees, just clear value.
     </h6>
-    <p class="my-6 text-center p-5 text-gray-200 rounded-2 border border-info">
+    <p class="my-6 text-center p-5 text-gray-200 rounded-2 bg-info border border-gray-900">
       All plans include two months free! (Pay for 10 months, get 12)
     </p>
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -56,7 +56,7 @@ const props = defineProps({
           </p>
           <a :href="tier.buttonLink" :title="tier.buttonTextTitle" :class="[
             'button mt-8 block py-3  transition duration-200 ease-in-out',
-            tier.isPopular ? 'success' : 'primary', tier.isEnterprise ? '' : ''
+            tier.isPopular ? 'success' : 'primary', tier.isEnterprise ? 'info' : ''
           ]">
             {{ tier.buttonText }}
           </a>
@@ -222,7 +222,7 @@ const props = defineProps({
 
 /* Specific styling for the 'Most Popular' card to make it stand out more */
 .popular-card {
-  background-image: linear-gradient(to bottom right, var(--color-info), var(--color-dark));
+  background-image: linear-gradient(to bottom right, var(--color-info-text), var(--color-dark));
 }
 
 .popular-card:hover {
