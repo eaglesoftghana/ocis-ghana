@@ -354,7 +354,7 @@ const closeLightbox = () => {
         </li>
         <li class="py-3">
           <h6 class="text-uppercase text-success font-bold">
-            *** Departments & Ministries *
+            * Departments & Ministries
           </h6>
 
           <p class="my-3">

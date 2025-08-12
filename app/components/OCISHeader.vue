@@ -92,10 +92,10 @@ function hideMenu(event) {
 </script>
 
 <template>
-  <div class="app-header fixed top-0 left-0 right-0 z-index-100 mb-2 shadow scrolling" style="margin-bottom: 75px;">
+  <div class="app-header fixed top-0 left-0 right-0 z-index-120 mb-2 shadow scrolling" style="margin-bottom: 75px;">
     <header class="layout py-2" style="max-width: 992px;">
       <nav class="flex  items-center justify-between">
-        <h4 class="app__name__header text-success cursor-pointer" @click="$router.push('/')">
+        <h4 class="app__name__header text-success user-select-none cursor-pointer" @click="$router.push('/#home')">
           OCIS GHANA
         </h4>
         <div class="md:d-none">

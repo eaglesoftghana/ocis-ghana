@@ -28,14 +28,18 @@ import { MailIcon, PhoneCallIcon } from 'lucide-vue-next'
           </li>
         </ul>
       </div>
-      <div class="my-3 flex flex-wrap justify-center lg:justify-between items-center text-white">
+      <div class="my-3 flex flex-wrap justify-center lg:justify-between items-center text-white" style="gap: 0.25rem">
         <small class="">
           &copy; {{ new Date().getFullYear() }} OCISGHANA. All rights reserved.
-          <nuxt-link external href="//eaglesoftghana.github.io" class="text-success">
+        </small>
+        <div class="flex items-center">
+          <small class="pr-2">
+            Powered by: 
+          </small>
+          
+          <nuxt-link external href="//eaglesoftghana.github.io" class="text-success d-block">
             Eaglesoft Ghana
           </nuxt-link>
-        </small>
-        <div class="flex items-center" style="gap: 1rem">
 
         </div>
       </div>
