@@ -1,23 +1,5 @@
 <script setup>
-import { Facebook, MailIcon, PhoneCall, PhoneCallIcon } from 'lucide-vue-next'
-
-
-
-const isGetInTouchButtonDisabled = ref(true)
-
-const getIntouchInput = ref("")
-
-const handleGetIntouchInput = (e) => {
-  isGetInTouchButtonDisabled.value = true
-  const value = e.target.value
-  if (value.length && getIntouchInput.value) {
-    isGetInTouchButtonDisabled.value = false
-  }
-}
-
-const handleGetIntouchForm = () => {
-
-}
+import { MailIcon, PhoneCallIcon } from 'lucide-vue-next'
 
 </script>
 
@@ -27,19 +9,19 @@ const handleGetIntouchForm = () => {
       <div class="text-center md:text-left">
         <ul class="list-unstyled">
           <li class="flex items-center" style="gap: 1rem;">
-            <MailIcon :size="20"/>
+            <MailIcon :size="20" />
             <a href="mailto:info@ocisghana.com">
               info@ocisghana.com
             </a>
           </li>
           <li class="flex items-center mt-2" style="gap: 1rem;">
-            <PhoneCallIcon :size="20"/>
+            <PhoneCallIcon :size="20" />
             <a href="tel:+233504411952">
               050 441 1952
             </a>
           </li>
           <li class="flex items-center mt-2" style="gap: 1rem;">
-            <PhoneCallIcon :size="20"/>
+            <PhoneCallIcon :size="20" />
             <a href="tel:+233543093942">
               054 309 3942
             </a>
@@ -49,9 +31,12 @@ const handleGetIntouchForm = () => {
       <div class="my-3 flex flex-wrap justify-center lg:justify-between items-center text-white">
         <small class="">
           &copy; {{ new Date().getFullYear() }} OCISGHANA. All rights reserved.
+          <nuxt-link external href="//eaglesoftghana.github.io" class="text-success">
+            Eaglesoft Ghana
+          </nuxt-link>
         </small>
         <div class="flex items-center" style="gap: 1rem">
-          
+
         </div>
       </div>
     </div>
@@ -60,10 +45,13 @@ const handleGetIntouchForm = () => {
 
 <style scoped>
 .whatsapp-icon {
-      width: 50px; /* You can change the size */
-      height: 50px;
-      fill: green; /* You can change the color */
-    }
+  width: 50px;
+  /* You can change the size */
+  height: 50px;
+  fill: green;
+  /* You can change the color */
+}
+
 .input-wrapper input.text-input {
   padding-left: 2.8rem !important;
 }

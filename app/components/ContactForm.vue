@@ -1,11 +1,13 @@
 <template>
   <div class="form-container">
-    <h5 class="form-title">Get in Touch</h5>
+    <h6 class="mt-5 text-center lg:text-left">
+      Get in Touch
+    </h6>
     <p class="">
       We're here to help you. Fill out the form below and we'll get back to you as soon as possible.
     </p>
 
-    <form @submit.prevent="submitForm" class="contact-form shadow-lg p-4">
+    <form @submit.prevent="submitForm" class="contact-form py-4">
       <div class="text-input-control">
         <label for="name">Name</label>
         <input type="text" placeholder="Please enter your full name" id="name" v-model="formData.name" required
@@ -78,7 +80,7 @@ const submitForm = () => {
 .contact-form {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 @media (min-width: 640px) {
@@ -109,5 +111,10 @@ const submitForm = () => {
     grid-column: span 2 / span 2;
     text-align: center;
   }
+}
+
+textarea {
+  font-size: inherit;
+  /* font-family: inherit; */
 }
 </style>

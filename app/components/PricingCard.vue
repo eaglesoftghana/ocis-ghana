@@ -26,10 +26,10 @@ const props = defineProps({
 <!-- Chosen Palette: Serene Harmony (Background: #f8f9fa, Text: #4a4a4a, Accents: #4f46e5, #16a34a, #2563eb, #9333ea) -->
 <template>
   <div class="py-3">
-    <p class="text-xl pt-4">
+    <h6 class="pt-4">
       Find the perfect plan for your church's needs. No hidden fees, just clear value.
-    </p>
-    <p class="my-6 text-center p-5 text-gray-200 bg-info rounded-2 text-xl border border-gray-900">
+    </h6>
+    <p class="my-6 text-center p-5 text-gray-200 rounded-2 border border-info">
       All plans include two months free! (Pay for 10 months, get 12)
     </p>
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -92,57 +92,6 @@ const props = defineProps({
   /* 48px */
 }
 
-
-.px-4 {
-  padding-left: 1rem;
-  /* 16px */
-  padding-right: 1rem;
-  /* 16px */
-}
-
-.sm\:px-6 {
-  /* For screens >= 640px */
-  padding-left: 1.5rem;
-  /* 24px */
-  padding-right: 1.5rem;
-  /* 24px */
-}
-
-.lg\:px-8 {
-  /* For screens >= 1024px */
-  padding-left: 2rem;
-  /* 32px */
-  padding-right: 2rem;
-  /* 32px */
-}
-
-
-.mb-12 {
-  margin-bottom: 3rem;
-  /* 48px */
-}
-
-
-
-.sm\:text-5xl {
-  /* For screens >= 640px */
-  font-size: 3rem;
-  /* 48px */
-  line-height: 1;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-  /* 16px */
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  /* 20px */
-  line-height: 1.75rem;
-  /* 28px */
-}
-
 .gap-8 {
   gap: 2rem;
   /* 32px */
@@ -157,11 +106,6 @@ const props = defineProps({
   /* For screens >= 1024px */
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-
-.relative {
-  position: relative;
-}
-
 
 .rounded-xl {
   border-radius: 0.75rem;
@@ -199,18 +143,6 @@ const props = defineProps({
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
-.border-indigo-600 {
-  border-color: #4f46e5;
-}
-
-.border {
-  border-width: 1px;
-}
-
 .golden-tag,
 .popular-tag {
   top: 0;
@@ -236,98 +168,12 @@ const props = defineProps({
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.p-8 {
-  padding: 2rem;
-  /* 32px */
-}
-
-
-
-.mt-6 {
-  margin-top: 1.5rem;
-  /* 24px */
-}
-
-.text-5xl {
-  font-size: 3rem;
-  /* 48px */
-  line-height: 1;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-  /* 4px */
-}
-
 .block {
   display: block;
 }
 
 .w-full {
   width: 100%;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  /* 12px */
-  padding-bottom: 0.75rem;
-  /* 12px */
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  /* 24px */
-  padding-right: 1.5rem;
-  /* 24px */
-}
-
-.rounded-md {
-  border-radius: 0.375rem;
-  /* 6px */
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.popular-button {
-  background-color: #4f46e5;
-  color: #ffffff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.popular-button:hover {
-  background-color: #4338ca;
-  /* indigo-700 */
-}
-
-.standard-button {
-  background-color: #e0e7ff;
-  /* indigo-100 */
-  color: #4f46e5;
-  /* indigo-700 */
-}
-
-.standard-button:hover {
-  background-color: #c7d2fe;
-  /* indigo-200 */
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
-  /* 24px */
-}
-
-.pb-8 {
-  padding-bottom: 2rem;
-  /* 32px */
-}
-
-.px-8 {
-  padding-left: 2rem;
-  /* 32px */
-  padding-right: 2rem;
-  /* 32px */
 }
 
 .rounded-b-xl {
@@ -355,13 +201,6 @@ const props = defineProps({
   /* 16px */
 }
 
-.flex {
-  display: flex;
-}
-
-.items-start {
-  align-items: flex-start;
-}
 
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -369,18 +208,6 @@ const props = defineProps({
 
 .text-green-500 {
   color: #22c55e;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-  /* 12px */
-}
-
-.text-base {
-  font-size: 1rem;
-  /* 16px */
-  line-height: 1.5rem;
-  /* 24px */
 }
 
 /* Custom CSS for additional styling beyond Tailwind defaults */

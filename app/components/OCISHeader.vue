@@ -6,24 +6,49 @@ import { AlignRightIcon } from 'lucide-vue-next';
 const links = ref(['home', 'about', 'features', 'pricing', 'contact']);
 const activeSection = ref(null);
 
+// const handleScroll = () => {
+//   const scrollY = window.scrollY;
+
+//   // Find the currently visible section
+//   links.value.forEach(link => {
+//     const element = document.getElementById(link);
+//     if (element) {
+//       const offsetTop = element.offsetTop;
+//       const offSetHeight = element.offsetHeight;
+
+//       // Check if the section is in the viewport, with an offset
+//       if (scrollY >= offsetTop - 150 && scrollY < offsetTop ) {
+//         activeSection.value = link;
+//       }
+//     }
+//   });
+// };
 const handleScroll = () => {
-  const scrollY = window.scrollY;
+  // Define an offset for when a section is considered "active"
+  const offset = 150;
 
   // Find the currently visible section
-  links.value.forEach(link => {
+  const visibleSection = links.value.find(link => {
     const element = document.getElementById(link);
-    if (element) {
-      const offsetTop = element.offsetTop;
-      const offSetHeight = element.offsetHeight;
+    if (!element) return false;
 
-      // Check if the section is in the viewport, with an offset
-      if (scrollY >= offsetTop && scrollY < offsetTop + offSetHeight) {
-        activeSection.value = link;
-      }
-    }
+    // Get the element's position relative to the viewport
+    const rect = element.getBoundingClientRect();
+
+    // Check if the top of the element is within the active zone
+    // The active zone is from 0 to 'offset' pixels from the top of the viewport
+    return rect.top <= offset && rect.bottom > offset;
   });
-  if (scrollY < 60) {
-    activeSection.value = 'home';
+
+  // If a section is found, update the activeSection ref and the URL hash
+  if (visibleSection) {
+    activeSection.value = visibleSection;
+
+    // Use history.replaceState to update the URL without adding a new history entry
+    // This is important to avoid cluttering the browser's back/forward history
+    if (window.location.hash !== `#${visibleSection}`) {
+      history.replaceState(null, '', `#${visibleSection}`);
+    }
   }
 };
 
@@ -31,7 +56,7 @@ const scrollToSection = (id) => {
   const element = document.getElementById(id);
   if (element) {
     window.scrollTo({
-      top: element.offsetTop, // Subtracting header height
+      top: element.offsetTop - 150, // Subtracting header height
       behavior: 'smooth'
     });
     // Update URL hash without causing a jump
@@ -42,7 +67,7 @@ const scrollToSection = (id) => {
 
 onMounted(() => {
   // Use a template ref for the header element
-  // activeSection.value = 'home'
+  activeSection.value = 'home'
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('click', hideMenu);
 });
@@ -67,12 +92,10 @@ function hideMenu(event) {
 </script>
 
 <template>
-  <div
-    class="app-header fixed top-0 left-0 right-0 z-index-100 mb-2 shadow scrolling"
-    style="margin-bottom: 75px;">
+  <div class="app-header fixed top-0 left-0 right-0 z-index-100 mb-2 shadow scrolling" style="margin-bottom: 75px;">
     <header class="layout py-2" style="max-width: 992px;">
       <nav class="flex  items-center justify-between">
-        <h4 class="app__name__header text-success" @click="$router.push('/')">
+        <h4 class="app__name__header text-success cursor-pointer" @click="$router.push('/')">
           OCIS GHANA
         </h4>
         <div class="md:d-none">
@@ -83,7 +106,8 @@ function hideMenu(event) {
         <div class="d-none md:d-block">
           <ul class="list-unstyled flex" style="gap: 1.25rem;">
             <li v-for="link in links" :key="link">
-              <a class="text-capitalize" :href="`/#${link}`" @click.prevent="scrollToSection(link)" :class="{ active: activeSection === link }">
+              <a class="text-capitalize" :href="`/#${link}`" @click.prevent="scrollToSection(link)"
+                :class="{ active: activeSection === link }">
                 {{ link }}
               </a>
             </li>
