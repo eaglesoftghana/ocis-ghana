@@ -1,0 +1,185 @@
+@import "./css/colors.css";
+@import "./css/spacing.css";
+@import "./css/reboot.css";
+@import "./css/typography.css";
+@import "./css/layout.css";
+@import "./css/display.css";
+@import "./css/flexbox.css";
+@import "./css/button.css";
+@import "./css/headings.css";
+@import "./css/flexbox.css";
+@import "./css/input.css";
+@import "./css/grid.css";
+
+@font-face {
+	font-family: "Open Sans", sans-serif;
+	src: url("./fonts/OpenSans-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+body {
+	font-family: "Open Sans", sans-serif;
+	/* background-image: url(./image/web-bg.webp); */
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-blend-mode: multiply;
+	/* height: 100vh; */
+	line-height: 1.65;
+	/* background: linear-gradient(to bottom right, #c3ddff, var(--color-bg)); */
+}
+/* 
+#__nuxt {
+	height: 100vh;
+} */
+@media screen and (max-width: 540px) {
+	body {
+		font-size: var(--font-size-sm);
+	}
+}
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity 0.2s ease, transform 0.2s ease;
+	transform: translateY(0);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+	opacity: 0;
+	transform: translateY(-5px);
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.spin {
+	animation-name: spin;
+	animation-delay: 0s;
+	animation-direction: normal;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.slide-in-enter-active,
+.slide-in-leave-active {
+	transition: opacity 0.3s ease, transform 0.2s ease;
+	transform: translateX(0);
+}
+
+.slide-in-enter-from,
+.slide-in-leave-to {
+	opacity: 0;
+	transform: translateX(5px);
+}
+
+:root {
+	--notify-success-color: var(--color-success);
+	--notify-warning-color: #ffc107;
+	--notify-error-color: #dc3545;
+	--notify-info-color: #17a2b8;
+	--notify-background-color: #f8f9fa;
+	--notify-text-color: #333;
+}
+
+.notify-notification-container {
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	z-index: 1000;
+}
+
+.notify-notification-box {
+	display: flex;
+	align-items: center;
+	padding: 15px 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	background-color: var(--notify-background-color);
+	transform: translateX(100%);
+	animation: notify-slide-in 0.5s forwards;
+	max-width: 350px;
+}
+
+@keyframes notify-slide-in {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes notify-slide-out {
+	from {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	to {
+		transform: translateX(120%);
+		opacity: 0;
+	}
+}
+
+.notify-notification-box[data-type="success"] {
+	border-left: 5px solid var(--notify-success-color);
+}
+.notify-notification-box[data-type="warning"] {
+	border-left: 5px solid var(--notify-warning-color);
+}
+.notify-notification-box[data-type="error"] {
+	border-left: 5px solid var(--notify-error-color);
+}
+.notify-notification-box[data-type="info"] {
+	border-left: 5px solid var(--notify-info-color);
+}
+
+.notify-notification-icon {
+	width: 24px;
+	height: 24px;
+	margin-right: 15px;
+}
+
+.notify-notification-icon svg {
+	width: 100%;
+	height: 100%;
+}
+.notify-notification-box[data-type="success"] .notify-notification-icon svg {
+	fill: var(--notify-success-color);
+}
+.notify-notification-box[data-type="warning"] .notify-notification-icon svg {
+	fill: var(--notify-warning-color);
+}
+.notify-notification-box[data-type="error"] .notify-notification-icon svg {
+	fill: var(--notify-error-color);
+}
+.notify-notification-box[data-type="info"] .notify-notification-icon svg {
+	fill: var(--notify-info-color);
+}
+
+.notification-content {
+	flex-grow: 1;
+}
+.notification-title {
+	margin: 0 0 5px 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--notify-text-color);
+}
+.notification-message {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: #666;
+}

@@ -1,0 +1,118 @@
+.d-none {
+  display: none!important
+}
+.d-inline {
+  display: inline!important
+}
+.d-inline-block {
+  display: inline-block!important
+}
+.d-block {
+  display: block!important
+}
+.d-flex {
+  display: flex!important
+}
+.d-inline-flex {
+  display: inline-flex!important
+}
+@media (min-width:375px) {
+  .xs\:d-none {
+    display: none!important
+  }
+  .xs\:d-inline {
+    display: inline!important
+  }
+  .xs\:d-inline-block {
+    display: inline-block!important
+  }
+  .xs\:d-block {
+    display: block!important
+  }
+  .xs\:d-flex {
+    display: flex!important
+  }
+  .xs\:d-inline-flex {
+    display: inline-flex!important
+  }
+}
+@media (min-width:425px) {
+  .sm\:d-none {
+    display: none!important
+  }
+  .sm\:d-inline {
+    display: inline!important
+  }
+  .sm\:d-inline-block {
+    display: inline-block!important
+  }
+  .sm\:d-block {
+    display: block!important
+  }
+  .sm\:d-flex {
+    display: flex!important
+  }
+  .sm\:d-inline-flex {
+    display: inline-flex!important
+  }
+}
+@media (min-width:768px) {
+  .md\:d-none {
+    display: none!important
+  }
+  .md\:d-inline {
+    display: inline!important
+  }
+  .md\:d-inline-block {
+    display: inline-block!important
+  }
+  .md\:d-block {
+    display: block!important
+  }
+  .md\:d-flex {
+    display: flex!important
+  }
+  .md\:d-inline-flex {
+    display: inline-flex!important
+  }
+}
+@media (min-width:1024px) {
+  .lg\:d-none {
+    display: none!important
+  }
+  .lg\:d-inline {
+    display: inline!important
+  }
+  .lg\:d-inline-block {
+    display: inline-block!important
+  }
+  .lg\:d-block {
+    display: block!important
+  }
+  .lg\:d-flex {
+    display: flex!important
+  }
+  .lg\:d-inline-flex {
+    display: inline-flex!important
+  }
+}
+@media (min-width:1440px) {
+  .xl\:d-none {
+    display: none!important
+  }
+  .xl\:d-inline {
+    display: inline!important
+  }
+  .xl\:d-inline-block {
+    display: inline-block!important
+  }
+  .xl\:d-block {
+    display: block!important
+  }
+  .xl\:d-flex {
+    display: flex!important
+  }
+  .xl\:d-inline-flex {
+    display: inline-flex!important
+  }
+}
