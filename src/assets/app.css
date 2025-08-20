@@ -33,11 +33,11 @@ body {
 #__nuxt {
 	height: 100vh;
 } */
-@media screen and (max-width: 540px) {
-	body {
-		font-size: var(--font-size-sm);
-	}
-}
+  /* @media screen and (max-width: 540px) {
+    body {
+      font-size: var(--font-size-sm);
+    }
+  } */
 .fade-enter-active,
 .fade-leave-active {
 	transition: opacity 0.2s ease, transform 0.2s ease;
