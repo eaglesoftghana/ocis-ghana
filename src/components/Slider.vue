@@ -39,7 +39,7 @@ const isDragging = ref(false)
 const startPos = ref(0)
 const currentTranslate = ref(0)
 const prevTranslate = ref(0)
-const autoplayTimer = ref<NodeJS.Timeout | null>(null)
+const autoplayTimer = ref<number | null>(null)
 const animationID = ref<number | null>(null)
 
 const trackStyle = computed(() => ({

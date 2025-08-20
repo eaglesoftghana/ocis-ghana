@@ -1,9 +1,7 @@
-import App from './App.vue'
 import './assets/app.css'
+import App from './App.vue'
 
 import { createApp } from 'vue'
 
+createApp(App).mount('#app')
 
-const app = createApp(App)
-
-app.mount('#app')
