@@ -128,7 +128,7 @@ function hideMenu(event) {
       style="top: 50px;z-index: 120;right: 12px;">
       <ul class="list-unstyled flex flex-column">
         <li :class="{ active: activeSection === link }" v-for="link in links" :key="link">
-          <a :target="link === 'login' && '_blank'" :href="link === 'login' ? '//app.ocisghana.com/login' : `/#${link}`"
+          <a :target="link === 'login' && '_blank'" :href="link === 'login' ? '//app.ocisghana.com/login' : `#${link}`"
             class="p-2 text-capitalize flex items-center" style="gap: 1rem;"
             :class="{ active: activeSection === link, 'button success': link === 'login' }">
             <span class="flex items-center icon">
