@@ -311,7 +311,7 @@ const closeLightbox = () => {
         about OCIS GHANA
       </h1>
       <p class="py-3">
-        Online Church Information System Ghana (OCIS-GHANA) is a flagship project by <a class="text-success"
+        Online Church Information System Ghana (OCIS GHANA) is a flagship project by <a class="text-success"
           href="//eaglesoftghana.github.io" target="_blank" referrerpolicy="origin">Eaglesoft Ghana.</a>
       </p>
       <p class="py-3">
@@ -345,7 +345,7 @@ const closeLightbox = () => {
         congregation and grow your ministry with confidence.
       </p>
       <ul class="list-unstyled">
-        <li class="my-5">
+        <li class="py-3">
           <h4 class="text-uppercase text-success font-bold text-base flex items-center justify-center">
             <CheckCheck class="" /> Membership & directory
           </h4>
